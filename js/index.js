@@ -40,3 +40,64 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const anchors = document.querySelectorAll('a')
+anchors[0].textContent = siteContent['nav']['nav-item-1']
+anchors[1].textContent = siteContent['nav']['nav-item-2']
+anchors[2].textContent = siteContent['nav']['nav-item-3']
+anchors[3].textContent = siteContent['nav']['nav-item-4']
+anchors[4].textContent = siteContent['nav']['nav-item-5']
+anchors[5].textContent = siteContent['nav']['nav-item-6']
+
+
+document.querySelector('h1').innerHTML = 'DOM<br>\ Is<br>\ Awesome'
+
+document.querySelector('button').textContent = siteContent['cta']['button']
+
+const ctaLogo = document.getElementById("cta-img");
+ctaLogo.setAttribute('src', siteContent["cta"]["img-src"])
+
+const h4s = document.querySelectorAll('h4')
+h4s[0].textContent = siteContent['main-content']['features-h4']
+h4s[1].textContent = siteContent['main-content']['about-h4']
+h4s[2].textContent = siteContent['main-content']['services-h4']
+h4s[3].textContent = siteContent['main-content']['product-h4']
+h4s[4].textContent = siteContent['main-content']['vision-h4']
+h4s[5].textContent = siteContent['contact']['contact-h4']
+
+console.log(h4s);
+
+const mainImg = document.getElementById("middle-img");
+mainImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+
+const paragraphs = document.querySelectorAll('p')
+paragraphs[0].textContent = siteContent['main-content']['features-content']
+paragraphs[1].textContent = siteContent['main-content']['about-content']
+paragraphs[2].textContent = siteContent['main-content']['services-content']
+paragraphs[3].textContent = siteContent['main-content']['product-content']
+paragraphs[4].textContent = siteContent['main-content']['vision-content']
+
+paragraphs[5].textContent = siteContent['contact']['address']
+paragraphs[6].textContent = siteContent['contact']['phone']
+paragraphs[7].textContent = siteContent['contact']['email']
+
+paragraphs[8].textContent = siteContent['footer']['copyright']
+
+const newLink1 = document.createElement('a')
+newLink1.textContent = 'Link1'
+newLink1.href = '#'
+newLink1.id = 'newLink1'
+document.querySelector('nav').appendChild(newLink1)
+newLink1.style.color = 'green'
+
+const newLink2 = document.createElement('a')
+newLink2.textContent = 'Link2'
+newLink2.href = '#'
+newLink2.id = 'newLink2'
+document.querySelector('nav').appendChild(newLink2)
+newLink2.style.color = 'green'
+
+anchors.forEach((anchor) => {
+  anchor.style.color = 'green'
+})
